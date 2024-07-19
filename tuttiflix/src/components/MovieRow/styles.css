@@ -1,13 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: black;
     color: white;
     margin: 0;
-    font-family: "Bebas Neue", sans-serif; 
+    font-family: "Bebas Neue", sans-serif;
+}
+
+
+.movieRow {
+    margin-bottom: 30px;
+}
+
+.movieRow h2 {
+    margin: 0px 0px 0px 30px;
+}
+
+.movieRow-listarea {
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.movieRow--list {
+    width: 99999999999px;
+}
+
+.movieRow-item {
+    display: inline-block;
+    width: 150px;
+}
+
+.movieRow-item img {
+    width: 100%;
+    transform: scale(0.9);
+}
+
+.movieRow-item img:hover {
+    transform: scale(1);
 }
