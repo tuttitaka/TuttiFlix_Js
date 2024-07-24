@@ -2,6 +2,7 @@ import tmdb from "./tmdb";
 import React, { useEffect, useState } from 'react';
 import MovieRow from "./components/MovieRow/MovieRow";
 import FeateuredMovie from "./components/FeaturedMovie/feateuredMovie";
+import './App.css';
 
 
 
@@ -21,8 +22,9 @@ function App() {
       let originals = list.filter(i => i.slug === 'originals');
       let randomChose = Math.floor(Math.random() * (originals[0].items.results.length - 1));
       let chose = originals[0].items.results[randomChose];
+      let choseInfo = await tmdb.getMovieInfo(chose.id, 'tv');
 
-      let chosenInfo = await tmdb.getMoviInfo(chose.id, 'tv')
+      setFeaturedData(choseInfo);
     }
     loadAll();
   }, []);
