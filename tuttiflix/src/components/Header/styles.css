@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 1rem 1rem;
+    height: 80px;
+    letter-spacing: 3px;
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    transition: all ease 0.7s;
+    z-index: 1000;
+}
+header.black{
+    background-color: #141414;
+}
+.header--title {
+    font-size: 30px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header--user {
+    font-size: 30px;
+    margin-right: 2rem;
+}

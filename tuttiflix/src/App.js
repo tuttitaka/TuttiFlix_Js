@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import MovieRow from "./components/MovieRow/MovieRow";
 import FeateuredMovie from "./components/FeaturedMovie/feateuredMovie";
 import './App.css';
+import Header from "./components/Header/Header";
 
 
 
@@ -11,7 +12,8 @@ function App() {
 
 
   const [moveList, setMovieList] = useState([]);
-  const [feateuredData, setFeaturedData] = useState([]);
+  const [feateuredData, setFeaturedData] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false)
 
   useEffect(() => {
     const loadAll = async () => {
@@ -30,10 +32,27 @@ function App() {
   }, []);
 
 
+  useEffect(() => {
+    const scrollListener=() =>{
+        if(window.scrollY > 10) {
+          setBlackHeader(true);
+        } else{
+          setBlackHeader(false);
+        }
+    }
+
+    window.addEventListener('scroll',scrollListener);
+    return () =>{
+      window.removeEventListener('scroll',scrollListener);
+    }
+  }, []);
+
+
 
 
   return (
     <div className="App">
+      <Header black={blackHeader} />
 
       {feateuredData &&
         <FeateuredMovie item={feateuredData} />
