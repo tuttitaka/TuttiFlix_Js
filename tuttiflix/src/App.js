@@ -63,6 +63,9 @@ function App() {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+       <footer>
+          Dados pegos do site <a href="https://www.themoviedb.org/">Themoviedb.org</a>
+       </footer>
     </div>
   );
 }
