@@ -1,6 +1,5 @@
 import React from "react";
 import './styles.css'
-import { CiPlay1 } from "react-icons/ci";
 
 
 export default ({ item }) => {
@@ -19,7 +18,7 @@ export default ({ item }) => {
         }}>
             <div className="featured--vertical">
                 <div className="featured--horizontal">
-                    <div className="featured--name">{item.original_name}</div>
+                    <div className="featured--name">{item.trendig_name}</div>
                     <div className="featured--info">
                         <div className="featured--points">{item.vote_average}Pontos</div>
                         <div className="featured--years">{fistDate.getFullYear()}</div>

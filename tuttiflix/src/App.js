@@ -21,7 +21,7 @@ function App() {
       setMovieList(list);
 
 
-      let originals = list.filter(i => i.slug === 'originals');
+      let originals = list.filter(i => i.slug === 'trendig');
       let randomChose = Math.floor(Math.random() * (originals[0].items.results.length - 1));
       let chose = originals[0].items.results[randomChose];
       let choseInfo = await tmdb.getMovieInfo(chose.id, 'tv');
